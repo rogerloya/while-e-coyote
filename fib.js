@@ -4,12 +4,15 @@ const prompt = require('prompt-sync')({ sigint: true });
 const number = Number(prompt('Enter a value for "n": '));
 let n1 = 0;
 let n2 = 1;
-let nextNum;
+let count = 0;
+let n3;
 
 
-for (let i = 1; i <= number; i++) {
+while (count < number) {
+    count = count + 1
+    n3 = n1 + n2;
     console.log(n1);
-    nextNum = n1 + n2;
     n1 = n2;
-    n2 = nextNum;
+    n2 = n3;
+    
 }
